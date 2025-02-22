@@ -1,4 +1,4 @@
-name: 23.05-N1
+name: 24.10-N1
 
 on:
   workflow_dispatch:
@@ -29,7 +29,7 @@ jobs:
     - name: Free up space
       uses: jlumbroso/free-disk-space@main
       with:
-        tool-cache: false
+        tool-cache: true
         android: true
         dotnet: true
         haskell: true
@@ -120,12 +120,12 @@ jobs:
           密码: password
           
           更新日志：
-          2025-0222：测试
+          2025-0222：测试24.10。
 
     - name: Delete old releases
       uses: dev-drprasad/delete-older-releases@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        keep_latest: 7
+        keep_latest: 5
         delete_tags : true
