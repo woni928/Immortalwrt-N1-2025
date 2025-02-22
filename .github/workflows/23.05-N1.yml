@@ -113,14 +113,16 @@ jobs:
         tag_name: OpenWrt-${{ env.PACKAGED_OUTPUTDATE }}
         files: ${{ env.PACKAGED_OUTPUTPATH }}/*.img.xz
         body: |
-          首次使用建议全新刷写
+          源码: ${{ env.REPO_URL }}
+          分支: ${{ env.REPO_BRANCH }}
+          
           * 基本信息
           IP: 192.168.123.2
           账户: root
           密码: password
           
-          更新日志：
-          2025-0222：测试
+          * 更新日志：
+          2025-0223：等待上游修复。
 
     - name: Delete old releases
       uses: dev-drprasad/delete-older-releases@master
