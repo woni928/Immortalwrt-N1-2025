@@ -97,10 +97,11 @@ jobs:
         OPENWRT_ARMVIRT: openwrt/bin/targets/*/*/*.tar.gz
         KERNEL_REPO_URL: breakingbadboy/OpenWrt
         KERNEL_VERSION_NAME: 6.1.y_6.6.y
-        PACKAGE_SOC: diy
+        #PACKAGE_SOC: diy
+        PACKAGE_SOC: s905d
         GZIP_IMGS: .xz
-        SCRIPT_DIY_PATH: N1/mk_s905d_n1.sh
-        WHOAMI: nantayo
+        #SCRIPT_DIY_PATH: N1/mk_s905d_n1.sh
+        WHOAMI: ham
         SW_FLOWOFFLOAD: 0
         SFE_FLOW: 0
 
@@ -122,7 +123,7 @@ jobs:
           密码: password
           
           * 更新日志：
-          2025-0223：测试24.10，去除lucky-ok。
+          2025-0223：去除lucky后正常了
 
     - name: Delete old releases
       uses: dev-drprasad/delete-older-releases@master
