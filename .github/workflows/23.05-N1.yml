@@ -124,7 +124,7 @@ jobs:
           密码: password
           
           * 更新日志：
-          2025-0223：等待上游修复。
+          2025-0222：去除passwall2 测试下。
 
     - name: Delete old releases
       uses: dev-drprasad/delete-older-releases@master
