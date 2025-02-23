@@ -22,8 +22,3 @@ git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 
 # 修改主机名
 sed -i 's/ImmortalWrt/OpenWrt/g' package/base-files/files/bin/config_generate
-
-# 关闭lucky开机启动
-#sed -i 's/option enabled '1'/option enabled '0'/g' files/etc/config/lucky
-
-
