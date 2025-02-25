@@ -1,4 +1,4 @@
-name: 24.10-N1-lucky
+name: 24.10-N1-DIY
 
 on:
   workflow_dispatch:
@@ -15,7 +15,7 @@ env:
   REPO_BRANCH: openwrt-24.10
   CONFIG_FILE: N1/24.10.config
   DIY_SH: N1/diy.sh
-  FILES: N1.1/files
+  #FILES: N1.1/files
   TZ: Asia/Shanghai
 
 jobs:
@@ -68,7 +68,7 @@ jobs:
 
     - name: Load custom config
       run: |
-        [ -e $FILES ] && mv $FILES openwrt/files
+        #[ -e $FILES ] && mv $FILES openwrt/files
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
 
     - name: SSH connect to Actions
@@ -125,7 +125,7 @@ jobs:
           密码: password
           
           * 更新日志：
-          2025-0223：再测试lucky随机启动.
+          2025-0225：测试注释调DIY设置。
 
     - name: Delete old releases
       uses: dev-drprasad/delete-older-releases@master
