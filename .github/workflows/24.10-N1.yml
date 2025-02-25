@@ -125,7 +125,7 @@ jobs:
           密码: password
           
           * 更新日志：
-          2025-0224：-测试lucky随机启动跟 N1.1-
+          2025-0225：测试自己用的DIY设置.
 
     - name: Delete old releases
       uses: dev-drprasad/delete-older-releases@master
