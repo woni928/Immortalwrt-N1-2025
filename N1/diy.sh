@@ -22,3 +22,8 @@ git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 
 # 修改主机名
 sed -i 's/ImmortalWrt/OpenWrt/g' package/base-files/files/bin/config_generate
+
+# 修复v2ray-plugin编译失败
+rm -rf feeds/luci/applications/luci-app-mosdns
+rm -rf feeds/packages/lang/golang
+git clone https://github.com/sbwml/packages_lang_golang feeds/packages/lang/golang
