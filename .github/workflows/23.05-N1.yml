@@ -126,6 +126,7 @@ jobs:
           
           * 更新日志：
           2025-0227：测试-passwall passwall2的依赖rust报错，等上游更新再编译。
+          2025-0305：看看是否修复。
 
     - name: Delete old releases
       uses: dev-drprasad/delete-older-releases@master
