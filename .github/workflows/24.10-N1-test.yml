@@ -1,4 +1,4 @@
-name: 24.10-N1
+name: 24.10-N1-test
 
 on:
   workflow_dispatch:
@@ -7,13 +7,13 @@ on:
         description: 'SSH connection to Actions'
         required: false
         default: 'false'
-  schedule:
-    - cron: "0 0 1,16 * *"
+  #schedule:
+    #- cron: "0 0 1,16 * *"
 
 env:
   REPO_URL: https://github.com/immortalwrt/immortalwrt
   REPO_BRANCH: openwrt-24.10
-  CONFIG_FILE: N1/24.10.config
+  CONFIG_FILE: N1/24.10-test.config
   DIY_SH: N1/diy.sh
   FILES: N1.1/files
   TZ: Asia/Shanghai
@@ -124,7 +124,7 @@ jobs:
             🔒 密码: password
           
             🍁 更新日志：
-               2025-0305：测试passwall依赖。
+               2025-0306：测试passwall依赖。
 
     - name: Delete old releases
       uses: dev-drprasad/delete-older-releases@master
