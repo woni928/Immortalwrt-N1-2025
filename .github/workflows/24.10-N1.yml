@@ -7,8 +7,8 @@ on:
         description: 'SSH connection to Actions'
         required: false
         default: 'false'
-  schedule:
-    - cron: "0 0 1,16 * *"
+  #schedule:
+    #- cron: "0 0 1,16 * *"
 
 env:
   REPO_URL: https://github.com/immortalwrt/immortalwrt
@@ -124,7 +124,7 @@ jobs:
             🔒 密码: password
           
             🍁 更新日志：
-               2025-0305：测试passwall依赖。
+               2025-0306：同步上游的更新。
 
     - name: Delete old releases
       uses: dev-drprasad/delete-older-releases@master
