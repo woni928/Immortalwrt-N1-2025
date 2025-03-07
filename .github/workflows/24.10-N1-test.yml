@@ -124,7 +124,7 @@ jobs:
             🔒 密码: password
           
             🍁 更新日志：
-               2025-0306：测试passwall依赖。
+               2025-0307：测试passwall依赖。再次添加一些依赖。
 
     - name: Delete old releases
       uses: dev-drprasad/delete-older-releases@master
