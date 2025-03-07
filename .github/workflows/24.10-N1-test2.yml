@@ -1,4 +1,4 @@
-name: 24.10-N1-test
+name: 24.10-N1-test2
 
 on:
   workflow_dispatch:
@@ -106,14 +106,13 @@ jobs:
         SW_FLOWOFFLOAD: 0
         SFE_FLOW: 0
 
-    - name: Upload firmware to release
-      uses: softprops/action-gh-release@master
-      if: ${{ env.PACKAGED_STATUS == 'success' }} && !cancelled()
-      env:
-        HAM_TOKEN: ${{ secrets.HAM_TOKEN }}
+    - name: Upload OpenWrt Firmware to Release
+      uses: ncipollo/release-action@main
       with:
-        tag_name: OpenWrt_${{ env.PACKAGED_OUTPUTDATE }}
-        files: ${{ env.PACKAGED_OUTPUTPATH }}/*.img.xz
+        tag: OpenWrt_${{ env.PACKAGED_OUTPUTDATE }}
+        artifacts: ${{ env.PACKAGED_OUTPUTPATH }}/*
+        allowUpdates: true
+        token: ${{ secrets.HAM_TOKEN }}
         body: |
         
             📂 源码: ${{ env.REPO_URL }}
@@ -124,7 +123,7 @@ jobs:
             🔒 密码: password
           
             🍁 更新日志：
-               2025-0307：测试passwall依赖-ok，再次添加一些依赖。添加HAM。
+               2025-0307：测试passwall依赖-ok，再次添加一些依赖。添加HAM同时更换release。
 
     - name: Delete old releases
       uses: dev-drprasad/delete-older-releases@master
