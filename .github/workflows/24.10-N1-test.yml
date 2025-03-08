@@ -110,7 +110,7 @@ jobs:
       uses: softprops/action-gh-release@master
       if: ${{ env.PACKAGED_STATUS == 'success' }} && !cancelled()
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       with:
         tag_name: OpenWrt_${{ env.PACKAGED_OUTPUTDATE }}
         files: ${{ env.PACKAGED_OUTPUTPATH }}/*.img.xz
@@ -124,12 +124,12 @@ jobs:
             🔒 密码: password
           
             🍁 更新日志：
-               2025-0307：为password多添加一些依赖，固件为什么没有生成？
+               2025-0308：为password多添加一些依赖。更新token，同时看固件能否生成？
 
     - name: Delete old releases
       uses: dev-drprasad/delete-older-releases@master
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       with:
         keep_latest: 7
         delete_tags : true
