@@ -124,7 +124,7 @@ jobs:
             🔒 密码: password
           
             🍁 更新日志：
-               2025-0308：为password多添加一些依赖。更新token，同时看固件能否生成？
+               2025-0309：为password多添加一些依赖，少一个。更新token，同时看能否打包？
 
     - name: Delete old releases
       uses: dev-drprasad/delete-older-releases@master
