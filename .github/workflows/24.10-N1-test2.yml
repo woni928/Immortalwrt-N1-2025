@@ -1,4 +1,4 @@
-name: 24.10-N1-test
+name: 24.10-N1-test2
 
 on:
   workflow_dispatch:
@@ -124,7 +124,7 @@ jobs:
             🔒 密码: password
           
             🍁 更新日志：
-               2025-0309：为password多添加一些依赖，剩下3个。同时看能否打包？
+               2025-0309：为password多添加一些依赖，剩下的3个也删除了。同时看能否打包？
 
     - name: Delete old releases
       uses: dev-drprasad/delete-older-releases@master
